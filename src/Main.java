@@ -27,7 +27,7 @@ public class Main {
         {
             if(ve instanceof Regular)
             {
-                sum += ((Regular) ve).getPassengerNum();
+                sum += ((Regular) ve).getPassengerNum() - 1;
             }
             else if (ve instanceof Bicycle)
             {
@@ -42,14 +42,21 @@ public class Main {
 
     public int LowestChargingTime(Vehicles[] vehicles_lst)
     {
-        int lowest = 0;
+        double lowest = 0.0;
+        int carId = 0;
+        double temp;
         for(Vehicles ve: vehicles_lst)
         {
             if(ve instanceof Cart)
             {
-                ((Cart) ve).getChargeTime();
+                temp = ((Cart) ve).getChargeTime();
+                if(temp > lowest)
+                {
+                    lowest = temp;
+                    carId = ve.getCarId();
+                }
             }
         }
-
+        return carId;
     }
 }
