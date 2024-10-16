@@ -1,5 +1,5 @@
 public class BigTruck extends Truck{
-    int truckSize;
+    private int truckSize;
     public BigTruck(int carId, int carAge, int wheelsNum, boolean steeringWay, double pEmPerMinute, int canCarry, double maxWeight, int truckSize) {
         super(carId, carAge, wheelsNum, steeringWay, pEmPerMinute, canCarry, maxWeight);
         this.truckSize = truckSize;

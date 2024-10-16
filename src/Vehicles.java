@@ -66,6 +66,6 @@ public class Vehicles{
 
     public double exhaust()
     {
-        return pEmPerMinute * 1440;
+        return pEmPerMinute * 60 * 24;
     }
 }
